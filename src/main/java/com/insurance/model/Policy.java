@@ -1,9 +1,11 @@
 package com.insurance.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.UniqueConstraint;
 
 import com.insurance.dto.PolicyDTO;
 
@@ -23,8 +25,12 @@ public class Policy {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
+	@Column(unique=true)
 	private String userName;
+	
+	@Column(unique=true)
 	private Long policyNumber;
+	
 	private Long accountNumber;
 	private Double premiumAmount;
 	

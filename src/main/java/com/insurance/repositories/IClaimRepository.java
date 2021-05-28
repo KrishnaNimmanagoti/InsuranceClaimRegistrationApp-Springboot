@@ -8,4 +8,8 @@ import com.insurance.model.Claim;
 @Repository
 public interface IClaimRepository extends JpaRepository<Claim, Integer>{
 
+	boolean existsByPolicyNumber(Long policyNumber);
+
+	Claim getByPolicyNumber(Long policyNumber);
+
 }

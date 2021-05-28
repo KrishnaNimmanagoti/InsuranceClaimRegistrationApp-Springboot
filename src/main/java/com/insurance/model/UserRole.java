@@ -22,12 +22,12 @@ public class UserRole {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private String loginid;
+	private String userName;
 	private String password;
 	private String roleType;
 	
 	public UserRole(UserDTO userDTO) {
-		this.loginid = userDTO.getLoginid();
+		this.userName = userDTO.getUserName();
 		this.password = userDTO.getPassword();
 		this.roleType = userDTO.getRoleType();
 	}

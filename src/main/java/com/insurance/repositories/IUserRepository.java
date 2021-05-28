@@ -8,8 +8,8 @@ import com.insurance.model.UserRole;
 @Repository
 public interface IUserRepository extends JpaRepository<UserRole, Integer> {
 
-	boolean existsByLoginid(String loginid);
+	boolean existsByUserName(String userName);
 	
-	UserRole findByLoginid(String loginid);
+	UserRole findByUserName(String userName);
 	
 }
